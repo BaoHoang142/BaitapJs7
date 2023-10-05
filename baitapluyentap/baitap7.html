@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mangso = [];
+
+        for (let i = 0; i < 10; i++) {
+            mangso[i] = Number(prompt("Nhập số vào mảng"))
+        }
+        document.write("mangso = [" + mangso + "]<br>")
+        let so = +prompt("Mời bạn nhập số");
+        console.log(so);
+        let id = mangso.indexOf(so);
+        console.log(id);
+        if (id != -1) {
+            mangso.splice(id, 1);
+            mangso.push(0);
+            document.write("mangso = [" + mangso + "]<br>");
+        } 
+    </script>
+    </body>
+</html>

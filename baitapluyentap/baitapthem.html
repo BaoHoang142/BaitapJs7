@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mangso = []
+        let count 
+        let max = 0, vitri = 0
+        while (mangso.length < 3) {
+        let sothunhat = +prompt("Nhập số nguyên thứ nhất");
+        mangso.push(sothunhat);
+        let sothuhai = +prompt ("Nhập số nguyên thứ hai");
+            while (sothuhai == sothunhat) {
+                sothuhai = +prompt ("Nhập lại số nguyên thứ hai");
+            }
+            mangso.push(sothuhai);
+        let sothuba = +prompt ("Nhập số nguyên thứ ba");
+            while (sothuba == sothunhat || sothuba == sothuhai) {
+                sothuba = +prompt ("Nhập lại số nguyên thứ ba");
+            }
+            mangso.push(sothuba);
+        }
+        
+        
+        document.write("mangso = [" + mangso + "]<br>")
+        for (let i = 0; i < mangso.length; i++) {
+          if (max < mangso[i]) {
+               max = mangso[i]
+          }
+        }
+        document.write("Phần tử lớn nhất trong mảng là " + max + " tại vị trí mangso[" + vitri + "]")
+        // if (sothuhai != sothunhat) {
+        //     mangso.push(sothuhai)
+        // } else {
+        // sothuhai = +prompt("Mời nhập 3 số nguyên khác nhau");   
+        // }
+
+        // for (let i = 0; i < 10; i++) {
+        //     mangso[i] = Number(prompt("Nhập số khác nhau vào mảng"))
+        // }
+        // console.log(mangso);
+        // document.write("mangso = [" + mangso + "]<br>")
+
+        // for (let i = 0; i < mangso.length; i++) {
+        //     if (max < mangso[i]) {
+        //         max = mangso[i]
+        //         vitri = i
+        //     }
+        // }
+        // document.write("Phần tử lớn nhất trong mảng là " + max + " tại vị trí mangso[" + vitri + "]")
+    </script>
+</body>
+</html>

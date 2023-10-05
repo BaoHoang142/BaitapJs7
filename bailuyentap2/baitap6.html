@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mang = [];
+        for (let i = 0; i < 7; i++) {
+            mang[i] = prompt("Nhập vào mảng")
+        }
+        document.write("Mảng ta có là" + mang);
+        for (let i = 0; i < mang.length; i++) {
+            id = mang.indexOf("-")
+            if (id != -1) {
+                mang.splice(id,1,"_")
+            }
+        }
+        document.write("Mảng sau ta có là" + mang)
+    </script>
+</body>
+</html>
